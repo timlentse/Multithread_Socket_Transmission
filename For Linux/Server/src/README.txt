@@ -8,8 +8,6 @@
 1. How to build(make sure automake ,libtool have been installed):
 
   Go to termimal:
-
-   $ ./configure
    $  make
 Note: it will generate executable file
 
