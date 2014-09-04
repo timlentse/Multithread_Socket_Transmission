@@ -19,7 +19,7 @@ For client: `(default port 5555)`
 
 `in the command line`   ./client [server_IP/domain] [PORTNO(5555)] [Filepath]
 
-###2. If you machine os is linux
+###2. If your machine os is linux
 
 See readme file in server/client folder
 
