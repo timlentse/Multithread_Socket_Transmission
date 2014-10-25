@@ -9,19 +9,19 @@ It will be more simple to compile the code if you are using visual studio(I test
 
 go to the top directory of client(or server) folder and double click the `.sln` file to build solution.
      
-Note: how to test
+**Note:** how to test?
 
-For server :
+* For server :
 
-double click server.exe 
+ double click server.exe 
      
-For client: `(default port 5555)`
+* For client: `(default port 5555)`
 
-`in the command line`   ./client [server_IP/domain] [PORTNO(5555)] [Filepath]
+ In the command line type : `./client [server_IP/domain] [PORTNO(5555)] [Filepath]`
 
-###2. If your machine os is linux
+###2. If your  machine Os is Linux
 
-See readme file in server/client folder
+See readme file in server/ client folder
 
 ###Enjoy !
    
