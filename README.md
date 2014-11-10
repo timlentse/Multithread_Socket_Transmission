@@ -9,7 +9,7 @@ It will be more simple to compile the code if you are using visual studio(I test
 
 go to the top directory of client(or server) folder and double click the `.sln` file to build solution.
      
-**Note:** how to test?
+**Note:** How to test?
 
 * For server :
 

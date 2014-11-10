@@ -14,8 +14,8 @@
 #include <fcntl.h>
 #include <pthread.h>
 #include <semaphore.h>
-
-#define PACK_SIZE 1024*512 //define pack size = 512KB
+/*define pack size = 512KB*/
+#define PACK_SIZE 1024*512 
 #define MAX_FILENAME_LEN  128
 #define THREAD_NUM 5
 

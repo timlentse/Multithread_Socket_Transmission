@@ -1,4 +1,8 @@
-// Socket_Multithread.cpp : 定义控制台应用程序的入口点。
+/**
+@description: Socket demo for Multithreading transmission in Windows
+@author: timlentse(tinglenxan@gmail.com)
+@Day: 2014-09
+*/
 #include "Method.h"  
 int main(int argc, char *argv[]) {
 
@@ -32,7 +36,8 @@ int main(int argc, char *argv[]) {
             exit(1);
         }
     }
-    Sleep(5); //wait for 5 seconds
+	 /*wait for 5 seconds*/
+    Sleep(5);
     closesocket(server_sockfd);
     return 0;
 }

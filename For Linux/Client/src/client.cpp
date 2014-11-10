@@ -1,3 +1,8 @@
+/**
+@description: Socket demo for Multithreading transmission in Linux
+@author: timlentse(tinglenxan@gmail.com)
+@Day: 2014-09
+*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <errno.h>
@@ -11,8 +16,8 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <libgen.h>
-
-#define PACK_SIZE 1024*512 //define pack size = 512KB
+/*define pack size = 512KB*/
+#define PACK_SIZE 1024*512 
 #define MAX_FILENAME_LEN  128
 
 struct File_info {
@@ -26,7 +31,7 @@ unsigned long Obtain_File_Size(const char *path)
     unsigned long Len = 0;
     struct stat statbuff;
     if(stat(path, &statbuff) < 0) {
-        printf("ERROR: Fail to stat file! \n");
+        printf("ERROR: Fail to state file! \n");
         return Len;
         exit(1);
     }
@@ -50,7 +55,7 @@ int establish_connection(char* hostname ,char* port) {
 
     if((portno = atoi(port))<0)
     {
-        fprintf(stderr,"ERROR: Wrong Inpout,Check your Port NO!\n");
+        fprintf(stderr,"ERROR: Wrong Input,Check your Port NO!\n");
         exit(1);
     }
 
@@ -84,7 +89,7 @@ int main(int argc, char *argv[])
         return 0;
     }
 
-    // set output buffer
+    /* set output buffer*/
     setvbuf(stdout, NULL, _IONBF, 0);
     fflush(stdout);
 
@@ -112,13 +117,13 @@ int main(int argc, char *argv[])
     /*time to send file information */
     bzero(buffer,1024);
     struct File_info file_info;
-    // obtain the size of file
+    /* obtain the size of file*/
     unsigned long File_Len = Obtain_File_Size(filePath);
     file_info.filesize = File_Len;
     printf("[Client]: File size = %lu bytes \n", File_Len);
 
 
-    // Get file base name (without dirname) and send to server
+    /*Get file base name (without dirname) and send to server*/
     char* base_name = basename(filePath);
     strcpy(file_info.filename,  base_name);
     printf("[Client]: The base name = %s \n", base_name);

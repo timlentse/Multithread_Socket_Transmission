@@ -1,3 +1,8 @@
+/**
+@description: Socket demo for Multithreading transmission in Linux
+@author: timlentse(tinglenxan@gmail.com)
+@Day: 2014-09
+*/
 #include "Method.h"
 int main(int argc, char *argv[]) {
     /*clear stdout stream*/
@@ -29,7 +34,8 @@ int main(int argc, char *argv[]) {
             exit(1);
         }
     }
-    sleep(5); //wait for 5 seconds
+	/*wait for 5 seconds*/
+    sleep(5); 
     close(server_sockfd);
     return 0;
 }

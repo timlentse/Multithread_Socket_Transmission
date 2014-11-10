@@ -12,8 +12,8 @@
 #pragma comment(lib, "..\\pthread_libs_for_win32\\lib\\pthreadVC2")
 
 #pragma comment(lib,"ws2_32.lib")
-
-#define PACK_SIZE 1024*512 //define pack size = 512KB
+ /*define pack size = 512KB */
+#define PACK_SIZE 1024*512
 #define MAX_FILENAME_LEN  128
 #define THREAD_NUM 5   
 

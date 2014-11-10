@@ -22,14 +22,15 @@ void* Thread_Fuc(void* arg) {
             exit(1);
         }
 
-        // read file information
+        /* read file information*/
         printf("[Server]: reading file info...!\n");
         struct File_info file_info;
         int info_read = 0;
-
+		
+        //FIXME
         /*here I have to use the exactly size(136 bytes) of file_info as an argument
          * if i use sizeof(file_info) as the argument, it results in errors and likely tends
-         *  to lose some message ,that is what I don't konw  */
+         *  to lose some message ,which is what I don't konw  */
         if((info_read = read(new_sockfd, &file_info, 136)))
         {
             /*extract file info*/
@@ -52,7 +53,7 @@ void* Thread_Fuc(void* arg) {
         char* file_name = file_info.filename;
         unsigned long al_read = 0;
         unsigned long file_len  = file_info.filesize;
-        // start to write file
+        /* start to write file*/
         printf("[Server]: Writing to file...!\n");
         FILE* file = fopen(file_name, "wb+");
         if(file == NULL)
